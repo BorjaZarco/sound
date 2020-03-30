@@ -1,8 +1,5 @@
 import java.lang.*;
 import processing.sound.*;
-import gifAnimation.*;
-
-GifMaker gifFile;
 
 AudioIn IN;
 Amplitude level;
@@ -27,9 +24,6 @@ ArrayList<Rectangle> rectangles;
 void setup() {
   size(640, 480);
   
-  gifFile = new GifMaker(this, "./assets/gotele-animation.gif");
-  gifFile.setRepeat(0);
-  
   IN = new AudioIn(this, 0);
 
   IN.start();
@@ -40,9 +34,6 @@ void setup() {
 }
 
 void draw() {
-  
-  gifFile.addFrame();
-  
   background(66,133,244);
   if (mode == 0) {
     textSize(64);
